@@ -1,8 +1,10 @@
 :root {
+  --light-input-color: #e8e2d9;
   --light-color: #d4c2b420;
   --text-color: #6a5c55;
   --text-color-light: #6a5c5570;
   --max-screen: 1024px;
+  --button-green: #5f7268;
 }
 
 .inter-font {
@@ -119,4 +121,112 @@ main img {
   -moz-box-shadow: 0px 10px 19px -4px rgba(147, 125, 115, 1);
   box-shadow: 0px 10px 19px -4px rgba(147, 125, 115, 1);
   border-radius: 10px;
+}
+
+main.bio .title-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+
+main.bio .title-section p {
+  width: 100%;
+  text-align: center;
+  color: var(--text-color-light);
+}
+
+main.bio .title-section img {
+  border-radius: 99999px !important;
+  aspect-ratio: 1/1;
+  height: 15rem;
+}
+
+main.bio section.bio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-bottom: 5rem;
+}
+
+main.bio section.bio p {
+  max-width: var(--max-screen);
+  text-align: justify;
+  font-style: italic;
+}
+
+main.bio section.bio p.strong {
+  font-weight: bolder;
+  font-size: 24px;
+}
+
+main.contact {
+  display: grid;
+  place-content: center;
+  height: calc(100vh - 10rem);
+  overflow: hidden;
+}
+
+main.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 300px;
+}
+
+main.contact h4 {
+  font-style: italic;
+  font-size: 28px;
+  color: var(--text-color);
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+input,
+textarea {
+  text-align: center;
+  border: none;
+  background-color: var(--light-input-color);
+  padding: 15px 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+}
+
+button {
+  border: none;
+  text-align: center;
+  border: none;
+  padding: 15px 20px;
+  background-color: var(--button-green);
+  color: white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 10px -11px rgba(0, 0, 0, 0.75);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-color-light);
+}
+
+footer {
+  width: 100vw;
+  display: grid;
+  place-content: center;
+}
+
+footer p {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  font-style: italic;
+  font-weight: bold;
+  color: var(--text-color-light);
 }
